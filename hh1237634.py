@@ -8,18 +8,14 @@ def is_password_good(password):
             if password.upper()[i] in password[i]:
                 sum += 1
                 break
-        else:
-            return False
         for i in range(len(password)):
             if password.lower()[i] in password[i]:
                 sum += 1
-                break
-        else:
-            return False
         for i in range(len(password)):
             if password[i] in '0123456789':
                 sum += 1
-                return True
+    if sum >= 4:
+        return True
     else:
         return False
 
